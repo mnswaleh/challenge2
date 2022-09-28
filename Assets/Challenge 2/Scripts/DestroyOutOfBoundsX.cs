@@ -18,6 +18,9 @@ public class DestroyOutOfBoundsX : MonoBehaviour
         // Destroy balls if y position is less than bottomLimit
         else if (transform.position.y < bottomLimit)
         {
+            SpawnManagerX spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManagerX>();
+            spawnManager.stopBalls();
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
 

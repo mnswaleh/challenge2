@@ -30,4 +30,7 @@ public class SpawnManagerX : MonoBehaviour
         Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
     }
 
+    public void stopBalls(){
+        CancelInvoke("SpawnRandomBall");
+    }
 }
